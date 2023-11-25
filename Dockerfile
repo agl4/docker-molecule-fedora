@@ -9,7 +9,6 @@ RUN dnf -y update && dnf clean all && dnf -y install \
 findutils \
 systemd \
 python3 \
-sudo \
 && dnf clean all
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
