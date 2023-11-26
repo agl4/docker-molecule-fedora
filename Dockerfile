@@ -4,12 +4,12 @@ ENV container docker
 # Setting up systemd
 # https://hub.docker.com/r/fedora/systemd-systemd/dockerfile
 
-# hadolint ignore=DL3033
+# hadolint ignore=DL3008
 RUN dnf -y update && dnf clean all && dnf -y install \
-findutils \
-systemd \
-python3 \
-&& dnf clean all
+    findutils \
+    systemd \
+    python3 \
+    && dnf clean all
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN find /lib/systemd/system/sysinit.target.wants/ -type l | grep -v systemd-tmpfiles-setup | xargs rm -f
