@@ -4,7 +4,7 @@ ENV container docker
 # Setting up systemd
 # https://hub.docker.com/r/fedora/systemd-systemd/dockerfile
 
-# hadolint ignore=DL3008
+# hadolint ignore=DL3041
 RUN dnf -y update && dnf clean all && dnf -y install \
     findutils \
     systemd \
