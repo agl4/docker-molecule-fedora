@@ -8,6 +8,7 @@ ENV container docker
 RUN dnf -y update && dnf clean all && dnf -y install \
     findutils \
     systemd \
+    sudo \
     python3 \
     && dnf clean all
 
