@@ -1,4 +1,4 @@
-FROM fedora:43
+FROM fedora:44
 ENV container docker
 
 # Setting up systemd
